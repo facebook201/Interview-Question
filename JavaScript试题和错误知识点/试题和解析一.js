@@ -17,7 +17,7 @@ var arr = ["a", "b", "c"];
 0: "a",
 1: "b",
 2: "c"
-所以arr[0] = "a";Object.keys(arr);返回的是一个有属性名组成的元素为字符串的数组。
+所以arr[0] = "a"; Object.keys(arr);返回的是一个有属性名组成的元素为字符串的数组。
 返回的就是 ["0", "1", "2"];
 
 var obj = {0: "a", 1: "b", 2: "c"};
@@ -42,15 +42,11 @@ obj["a"] > 2;是否大于2？而obj["a"] 等于0 所以无法返回 "a";
 http://blog.csdn.net/jackshiny/article/details/51941796
 ==================================================
 
-var a = {n: 1};		
+var a = {n: 1};
 var b = a;
 a.x = a = {n: 2};
-console.log(a.x);		
+console.log(a.x);
 console.log(b.x);
 =====================
 Ans: 首先我们要知道 45 46 两行代码表示 a 和 b指向的是同一个对象。
 其次 . 操作符优先级高于赋值操作符。
-
-
-
-
