@@ -21,3 +21,9 @@ cache-control: max-age = 93312000; 告诉浏览器的生存时间。
 
 * If-None-Match/ETag
 首先服务器端会在response headers中返回ETag(文件是一个hash);当资源改变时 ETag也会发生改变。浏览器在发起请求时在 If-None-Match字段携带缓存的ETag。        
+
+ETag 和 Last-Modified的区别
+
+Last-Modified是精确到秒的。如果一秒钟资源多次服务不会感知到缓存失效。
+ETag 本身消耗CPU 它的优先级比Last-Modified高。
+ETag在分布式系统中生成的值可能不一样。
