@@ -1,3 +1,12 @@
+严格模式下 如果你要使用全局变量那么你要引它。
+
+(function(){
+  'use strtic';
+  var a = b = 5;
+  // 如果 这样就不会报错
+  // var a = window.b = 5;
+})();
+console.log(b); // b is not defined
 
 //JavaScript
 var length = 10;
@@ -61,7 +70,7 @@ Foo.getName();
 getName();
 //函数声明比var的优先级还要高。所以会提升到前面。只有函数表达式会等待在执行。所有后面的
 //会覆盖前面的。所以JavaScript里面没有方法重载
-Foo().getName();    
+Foo().getName();
 //从上面的() 和 . 优先级来看。Foo().getName() 从左向右执行，首先运行Foo() 全局的getName被覆盖输出。
 //console.log(1); 并返回的this此时代表的是window。随后相当于执行window.getName();
 getName();      //1 也是一样

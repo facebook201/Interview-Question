@@ -52,7 +52,7 @@
       }else if(elem != document.documentElement){
         return getRealBg(elem.parentNode);
       }
-      return ''
+      return '';
     }
 
     // 将rbg颜色转换为16进制

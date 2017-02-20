@@ -1,4 +1,4 @@
-### 盒子模型
+﻿### 盒子模型
 
 * IE盒子 width = contentWidth + paddingWidth + borderWidth;
 * W3C盒子 width = contentWidth;
