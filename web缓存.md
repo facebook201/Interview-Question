@@ -3,8 +3,7 @@
 缓存的控制需要浏览器和服务器端协同完成,所以他们需要一个传递信息的方式, 事实上目前的web缓存主要通过Headers来传递信息。
 
 ![border] (http://7xkpdt.com1.z0.glb.clouddn.com/165f046eab640ae0cda0663795a7feff.png)
-
-
+![border] (https://sfault-image.b0.upaiyun.com/291/241/2912417468-57c2a384aa114)
 #### cache-control 和 max-age
 cache-control: 通过最大生存时间来判断资源的缓存是否有效。
 cache-control: max-age = 93312000; 告诉浏览器的生存时间。
