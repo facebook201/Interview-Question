@@ -1,13 +1,17 @@
+### 1闭包
 
-// 实现一个函数 sum(2, 3) 和 sum(2)(3) 正常工作
+```javascript
 
-function sum(){
-  var sum1 = arguments[0];
-  if (arguments.length === 2) {
-    return arguments[0] + arguments[1];
-  } else {
-    return function(sum2){
-      return sum1 + sum2;
-    }
+var func = (function(a){
+  this.a = a;
+  return function(a) {
+    a += this.a;
+    return a;
   }
-}
+})(function(a, b){
+  return a;
+}(1, 2));
+
+func(4); // 5
+```
+
