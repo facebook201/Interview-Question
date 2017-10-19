@@ -23,6 +23,21 @@ var obj = {
 };
 
 obj.method(fn, 1);  // 10 2 5
+
+// 闭包2
+var func = (function(a){
+  this.a = a;
+  return function(a) {
+    a += this.a;
+    return a;
+  }
+})(function(a, b){
+  return a;
+}(1, 2));
+
+func(4); // 5
+
+
 /*
 根据上面的代码。会执行下面的三行代码
 * f()
