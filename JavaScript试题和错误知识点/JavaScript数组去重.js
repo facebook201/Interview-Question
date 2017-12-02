@@ -52,3 +52,32 @@ function unique4(arr){
 	});
 	return res;
 }
+
+// 方案5 这种方案 会单独提出 NaN 和 {} 的判断 我们都知道 NaN不等于任何值 包括自己。 {} 跟 {} 呢?
+
+Array.prototype.unique = function(){
+    var newArr = [];
+    var flag = true;	
+    for(var i = 0; i < this.length; i++) {
+        if (newArr.indexOf(this[i] == -1)) {
+	    if (arr[i] != arr[i]) {
+	        if (flag) {
+		    newArr.push(this[i]);
+		    flag = false;	
+		}
+	    }else {
+	        newArr.push(arr[i]);
+	    }
+	}
+    }
+    return newArr;
+}
+
+
+
+
+
+
+
+
+
